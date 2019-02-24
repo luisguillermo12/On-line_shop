@@ -9,6 +9,10 @@ Route::get('/User/ConfirmationCode/{code}','Auth\UserController@verify_code' )->
 Route::group(['middleware' => 'confirmed'], function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/ToPost', 'Publications\ToPostController');
+
+
 Route::get('/filter', 'HomeController@filter')->name('filter');
 
 

@@ -12,7 +12,7 @@
       <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <ul class="site-infos text-right">
-              <li><a href="#"><i class="fa fa-bullhorn"></i> Pubblica</li></a>
+              <li><a href="{{ url('/ToPost') }}"><i class="fa fa-bullhorn"></i> Pubblica</li></a>
                @if (Auth::guest())
               <li> <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> Login</li>
               <li><a href="{{ url('/register') }}"><i class="fa fa-sign-in"></i> Register</li> 
