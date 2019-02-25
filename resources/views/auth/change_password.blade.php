@@ -23,35 +23,35 @@
             <div class="box-body">
               <div class="form-group">
                 <div class="col-sm-6 col-sm-offset-3">
-                  @include('admin.includes.messages')
+                  @include('layouts.include.messages')
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-6 col-sm-offset-3">
-                  <span id="helpBlock" class="help-block">Los campos marcados con un asterisco (*) son obligatorios.</span>
+                  <span id="helpBlock" class="help-block"> Fields marked with an asterisk (*) are required.</span>
                 </div>
               </div>
               <div class="form-group">
-                  {{ Form::label('password', 'Contraseña(*)', ['class' => 'col-lg-3 control-label']) }}
+                  {{ Form::label('password', 'Password(*)', ['class' => 'col-lg-3 control-label']) }}
 
                   <div class="col-lg-6">
-                    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Contraseña']) }}
+                    {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'password']) }}
                   </div>
               </div>
 
               <div class="form-group">
-                  {{ Form::label('password_confirmation', 'Confirmar contraseña(*)', ['class' => 'col-lg-3 control-label']) }}
+                  {{ Form::label('password_confirmation', 'Password Confirmation(*)', ['class' => 'col-lg-3 control-label']) }}
 
                   <div class="col-lg-6">
-                    {{ Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Confirmar Contraseña']) }}
+                    {{ Form::password('password_confirmation', ['class' => 'form-control', 'placeholder' => 'Password Confirmation']) }}
                   </div>
               </div>
 
               <div class="form-group">
                 <div class="col-sm-12">
                   <div class="text-center">
-                    {{ Form::submit('Actualizar', ['class' => 'btn btn-success btn-sm','title'=>'Actualizar']) }}
-                    {{ link_to_route('UserProfile', 'Cancelar', [$user->id], ['class' => 'btn btn-danger btn-sm','title'=>'Cancelar']) }}
+                    {{ Form::submit('Update', ['class' => 'btn btn-success btn-sm','title'=>'Actualizar']) }}
+                    {{ link_to_route('UserProfile', 'Cancel', [$user->id], ['class' => 'btn btn-danger btn-sm','title'=>'Cancelar']) }}
                   </div>
                 </div>
               </div>

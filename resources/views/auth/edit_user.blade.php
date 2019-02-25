@@ -1,13 +1,5 @@
-{{-- @Nombre del programa:  --}}
-{{-- @Funcion:  --}}
-{{-- @Autor:  --}}
-{{-- @Fecha Creacion:  --}}
-{{-- @Requerimiento: --}}
-{{-- @Fecha Modificacion: --}}
-{{-- @Modificado por:    --}}
 
 @extends('layouts.app')
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -20,7 +12,7 @@
         <div class="box box-danger">
             <div class="box-header with-border">
               <input type="hidden" name="codigo_gui" value="MOD-SEGU-1.2.2" id="codigo_gui">
-                <h3 class="box-title">Editar </h3>
+                <h3 class="box-title">Edit </h3>
 
                 <div class="box-tools pull-right">
                   <button type="button" class="btn btn-box-tool" data-widget="collapsee">
@@ -32,7 +24,7 @@
             <div class="box-body">
               <div class="form-group">
                 <div class="col-sm-6 col-sm-offset-3">
-                  @include('admin.includes.messages')
+                  @include('layouts.include.messages')
                 </div>
               </div>
               <div class="form-group">
@@ -42,17 +34,17 @@
               </div>
 
               <div class="form-group">
-                  {{ Form::label('name', 'Nombre(*)', ['class' => 'col-lg-3 control-label']) }}
+                  {{ Form::label('name', 'Name(*)', ['class' => 'col-lg-3 control-label']) }}
 
                   <div class="col-lg-6">
-                      {{ Form::text('name', $user->name, ['class' => 'form-control', 'placeholder' => 'Nombre']) }}
+                      {{ Form::text('name', $user->name, ['class' => 'form-control', 'placeholder' => 'Name']) }}
                   </div>
               </div>
               <div class="form-group">
                   {{ Form::label('email', 'Email(*)', ['class' => 'col-lg-3 control-label']) }}
 
                   <div class="col-lg-6">
-                      {{ Form::text('email', $user->email, ['class' => 'form-control', 'placeholder' => 'Usuario']) }}
+                      {{ Form::text('email', $user->email, ['class' => 'form-control', 'placeholder' => 'Email']) }}
                   </div>
               </div>
                    <div class="form-group">
@@ -67,8 +59,8 @@
               <div class="form-group">
                 <div class="col-sm-12">
                   <div class="text-center">
-                    {{ Form::submit('Guardar', ['class' => 'btn btn-success btn-sm','title'=>'Guardar']) }}
-                    {{ link_to_route('UserProfile', 'Cancelar', [ $user->id ], ['class' => 'btn btn-danger btn-sm','title'=>'Cancelar']) }}
+                    {{ Form::submit('Update', ['class' => 'btn btn-success btn-sm','title'=>'Guardar']) }}
+                    {{ link_to_route('UserProfile', 'Cancel', [ $user->id ], ['class' => 'btn btn-danger btn-sm','title'=>'Cancelar']) }}
                   </div>
                 </div>
               </div>

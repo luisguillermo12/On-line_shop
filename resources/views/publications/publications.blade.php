@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-
+<div class="box-tools pull-right">
 <a title="Crear publicacion" class="btn btn-sm btn-success" href="{{route('ToPost.create')}}"><i class="fa fa-plus"></i> Crear publicacion</a>
-
+</div>
 <section class="portfolio">
     <div class="container">
 
@@ -19,6 +19,7 @@
 
 
       <div class="row">
+  @if($publications->count()>0)
      @foreach($publications as $publication)
         <div class="col-sm-3 col-xs-6">
           <div class="portfolio-box">
@@ -35,8 +36,11 @@
           <span><center> <h4>{{ number_format($publication->price, 2, ',', '.') }} $  <h4>  
                          </center></span>
         </div>
+      @endforeach
+  @else
+        <span> Currently does not have active publications</span>
 
-   @endforeach
+  @endif
 
 
               

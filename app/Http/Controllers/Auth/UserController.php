@@ -73,7 +73,7 @@ class UserController extends Controller
          $user->status = 0;
          $result = $user->save();
 
-         alert()->success('usuario desactivado', 'Successfully');
+         alert()->success('Disabled user', 'Successfully');
                     return redirect()->route('UserProfile', $id);
     }
     public function activate ($id){ 
@@ -82,7 +82,7 @@ class UserController extends Controller
          $user->status = 1;
          $result = $user->save();
 
-         alert()->success('usuario Activado', 'Successfully');
+         alert()->success('User Activate', 'Successfully');
                     return redirect()->route('UserProfile', $id);
     }
     public function re_code_verify ($id){
