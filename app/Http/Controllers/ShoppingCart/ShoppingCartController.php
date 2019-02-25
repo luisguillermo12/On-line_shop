@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use Massaggi\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Auth;
-use Massaggi\User;
 use Massaggi\Publications;
 use Massaggi\ParametersSystem;
 use Illuminate\Support\Facades\Storage;
 use Massaggi\ShoppingCart;
+use Massaggi\User;
 class ShoppingCartController extends Controller
 {
 
@@ -24,9 +24,10 @@ class ShoppingCartController extends Controller
     }
 
     public function index(){
-    	$cart = ShoppingCart::where('user_id',Auth::user()->id)->get();
+    	$cart = User::where('id', Auth::user()->id)->first();
        
-       //dd($cart);
+        return view('shoppingcart.cart')
+        ->with('cart',$cart->cart);
     }
 
 }

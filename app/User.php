@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Massaggi\Role;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Massaggi\Traits\PermisionModule;
+use Massaggi\Publications;
 
 class User extends Authenticatable
 {
@@ -36,5 +37,10 @@ class User extends Authenticatable
         {
             return $this->belongsToMany(Role::class, 'assigned_role')
              ->withPivot('role_id');
+        }
+
+        public function cart()
+        {
+            return $this->belongsToMany(Publications::class, 'shopping_cart','user_id',  'publication_id')->withPivot('publication_id');
         }
 }
