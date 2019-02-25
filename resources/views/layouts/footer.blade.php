@@ -1,5 +1,6 @@
 
-  <footer>
+  <footer class="navbar navbar-fixed-bottom" >
+    
     <div class="overlay">
       <div class="footer-content">
         <div class="container">
@@ -10,20 +11,9 @@
               </div>
             </div>
             <div class="col-md-4 col-sm-6 has-m">
-
-        <!--      <div class="item">
-                <h4 class="widget-title">Buscar productos</h4>
-                <div class="widget">
-
-                  <input type="text" name="search">
-
-                </div>
-              </div> -->
-
             </div>
             <div class="col-md-4 col-sm-6">
               <div class="item">
-
                 <ul class="social-media">
                   <li>
                     <a href="#">
@@ -37,6 +27,7 @@
         </div>
       </div>
     </div>
+
     <div class="copyright">
       <div class="container">
         <div class="row">
@@ -54,11 +45,10 @@
              <li>
                 <a href="#">SiteMap</a>
               </li>
-
-
             </ul>
           </div>
         </div>
       </div>
     </div>
+
   </footer>

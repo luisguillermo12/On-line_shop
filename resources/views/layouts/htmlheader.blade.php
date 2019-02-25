@@ -4,9 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Massaggi24') }}</title>
-    <link rel="shortcut icon" href="{{ asset('/image/image_page/shortcute.png') }}" >
-
-
+    <link rel="shortcut icon"  class="fa fa-cart-plus" href="{{ asset('/image/publications/shortcute.png') }}" >
+                                                                       
 	{{ Html::style("/vendor/css/font-awesome.min.css") }}
 	{{ Html::style("/vendor/css/owl.carousel.css") }}
 	{{ Html::style("/vendor/css/owl.theme.css") }}
@@ -26,5 +25,5 @@
 	{{ Html::style("/vendoradmin/bower_components/bootstrap-daterangepicker/daterangepicker.css") }}
 	{{ Html::style("/vendoradmin/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css") }}
 	{{ Html::style("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic") }}
-{{ Html::script('js/alert/sweetalert2.all.js') }}
+    {{ Html::script('js/alert/sweetalert2.all.js') }}
 </head>

@@ -5,16 +5,15 @@
  @include('layouts.header')
  @include('layouts.siderbar')
     <div id="app">
+
         @yield('content')
+     
     </div>
-
- @include('layouts.footer')
-
- @include('sweetalert::alert')
+     @include('sweetalert::alert')
  @include('sweetalert::view')
 
-
-   @yield('after-scripts-end')
+@include('layouts.footer')
+@yield('after-scripts-end')
 @include('layouts.scripts')
 @include('layouts.script.popover')
 </body>
