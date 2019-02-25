@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <div class="heading">
-          <h3>   Post user {{ Auth::user()->name }}</h3>
+          <h3>   Your publications</h3>
           </div>
         </div>
       </div>

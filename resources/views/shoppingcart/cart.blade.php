@@ -10,7 +10,7 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <div class="heading">
-          <h3>  Your cart shoping user </h3>
+          <h3>  Your cart shoping </h3>
           </div>
         </div>
       </div>
