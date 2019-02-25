@@ -37,7 +37,13 @@
           <span><center><h4> {{ number_format($publication->price, 2, ',', '.') }} $
            @if (!Auth::guest())
               @if($publication->user_id != Auth::user()->id )  
-                  <a data-toggle="tooltip" data-placement="top" title="add shopin car" class="btn btn-xs btn-primary"  href="{{route('ShoppingCartAdd',$publication->id)}}"><i class="fa fa-cart-plus"></i></a> @endif 
+                @foreach($in_the_cart as $public_in_cart )
+                  @if( !$publications->contains($public_in_cart) )
+                  <a data-toggle="tooltip" data-placement="top" title="add shopin car" class="btn btn-xs btn-primary"  href="{{route('ShoppingCartAdd',$publication->id)}}"><i class="fa fa-cart-plus"></i></a> 
+                  @endif 
+                  <a data-toggle="tooltip" data-placement="top" title="to post in the car" class="btn btn-xs btn-success"  href="{{route('ShoppingCartrepeat',$publication->id)}}"><i class="fa  fa-tag"></i></a> 
+                @endforeach
+              @endif
            @endif
         <h4> </center></span>
         </div>

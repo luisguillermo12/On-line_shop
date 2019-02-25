@@ -30,4 +30,10 @@ class ShoppingCartController extends Controller
         ->with('cart',$cart->cart);
     }
 
+    public function inthecart($id){
+
+        alert()->success('product is already in the cart', 'Successfully');
+        return redirect()->back();
+    }
+
 }

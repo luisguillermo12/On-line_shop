@@ -12,7 +12,7 @@ Route::resource('/ToPost', 'Publications\ToPostController');
 
 Route::get('/ShoppingCartAdd/User/Publications', 'ShoppingCart\ShoppingCartController@index')->name('PublicationsShoppingCart');
 Route::get('/ShoppingCartAdd/{id}', 'ShoppingCart\ShoppingCartController@add')->name('ShoppingCartAdd');
-
+Route::get('/ShoppingCartrepeat/{id}', 'ShoppingCart\ShoppingCartController@inthecart')->name('ShoppingCartrepeat');
 
 
 Route::get('/User/Changepassword/{id}', 'Auth\UserController@changepassword')->name('UserProfileChangePasword');

@@ -23,11 +23,26 @@ class HomeController extends Controller
     
     
     public function welcome (){
-        $parameter = ParametersSystem::where('code', 2)->first(); 
         $publications = Publications::get();
-            return view('welcome')
-            ->with('parameter', $parameter)
-            ->with('publications', $publications);
+
+    if (!Auth::guest()){
+        $cart = User::where('id', Auth::user()->id)->first()->cart;
+        $in_the_cart = $publications->intersect($cart);
+    } 
+        $parameter = ParametersSystem::where('code', 2)->first(); 
+     
+
+             if (!Auth::guest()){
+                    return view('welcome')   
+                      ->with('in_the_cart', $in_the_cart)
+                    ->with('parameter', $parameter)
+                    ->with('publications', $publications);
+              
+            }else {
+                     return view('welcome')   
+                    ->with('parameter', $parameter)
+                    ->with('publications', $publications);
+            }
     }
 
 
