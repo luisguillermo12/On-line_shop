@@ -10071,6 +10071,7 @@ footer .overlay .footer-content .item .instagram-list li {
 footer .copyright {
   background-color: #000;
   padding: 15px 0;
+  
 }
 /* line 178, ../sass/layouts/_footer.scss */
 footer .copyright p {
@@ -13021,7 +13022,7 @@ footer .copyright ul.navigation-links li:last-child {
 /* line 3, ../sass/components/_portfolio.scss */
 .portfolio .portfolio-box {
   margin-bottom: 30px;
-  border: 6px solid #08088A;
+  border: 2px solid #08088A;
 }
 /* line 5, ../sass/components/_portfolio.scss */
 .portfolio .portfolio-box .portfolio-img {

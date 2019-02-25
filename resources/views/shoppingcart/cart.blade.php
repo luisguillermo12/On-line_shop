@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="box-tools pull-right">
-<a title="Crear publicacion" class="btn btn-sm btn-success" href="{{route('ToPost.create')}}"><i class="fa fa-plus"></i> Crear publicacion</a>
 </div>
 <section class="portfolio">
     <div class="container">
@@ -11,7 +10,7 @@
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2 text-center">
           <div class="heading">
-          <h3>   Your publications</h3>
+          <h3>  Your cart shoping </h3>
           </div>
         </div>
       </div>
@@ -19,8 +18,8 @@
 
 
       <div class="row">
-  @if($publications->count()>0)
-     @foreach($publications as $publication)
+  @if($cart->count()>0)
+     @foreach($cart as $publication)
         <div class="col-sm-3 col-xs-6">
           <div class="portfolio-box">
             <div class="portfolio-img">

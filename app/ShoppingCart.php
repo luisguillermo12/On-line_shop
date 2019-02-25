@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Massaggi\images;
+use Massaggi\Publications;
 
 
 class ShoppingCart extends Model 
@@ -14,9 +15,7 @@ class ShoppingCart extends Model
     protected $primarykey = 'id';
     protected $fillable = ['user_id', 'publication_id'];
 
- 
- /*    public function publications(){
-   		 return $this->hasMany(images::class, 'publication_id');
-	}*/
- 
+
+      
+
 }

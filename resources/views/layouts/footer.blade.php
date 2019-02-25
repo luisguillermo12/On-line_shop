@@ -7,14 +7,14 @@
           <div class="row">
             <div class="col-md-4 col-sm-6 has-m">
               <div class="item">
-                <h4>More shop</h4>
+                
               </div>
             </div>
             <div class="col-md-4 col-sm-6 has-m">
             </div>
             <div class="col-md-4 col-sm-6">
               <div class="item">
-                <ul class="social-media">
+                <ul class="social-media1">
                   <li>
                     <a href="#">
                       <i class="fa fa-instagram"></i>
@@ -28,8 +28,8 @@
       </div>
     </div>
 
-    <div class="copyright">
-      <div class="container">
+    <div class="copyright  navbar-fixed-bottom">
+      <div class="container ">
         <div class="row">
           <div class="col-sm-6">
             <p>
