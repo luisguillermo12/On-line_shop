@@ -11,14 +11,14 @@
             </div>
             <div class="col-md-4 col-sm-6 has-m">
 
-              <div class="item">
+        <!--      <div class="item">
                 <h4 class="widget-title">Buscar productos</h4>
                 <div class="widget">
 
                   <input type="text" name="search">
 
                 </div>
-              </div>
+              </div> -->
 
             </div>
             <div class="col-md-4 col-sm-6">
@@ -49,7 +49,7 @@
           <div class="col-sm-6">
             <ul class="navigation-links text-right">
               <li>
-                <a href="#"> Termini e Condizioni </a>
+                <a href="#"> terms and Conditions </a>
               </li>
              <li>
                 <a href="#">SiteMap</a>
@@ -62,46 +62,3 @@
       </div>
     </div>
   </footer>
-
-  <!-- Start Search -->
-
-  <div class="searchPopup">
-    <span class="closeBtn"></span>
-    <div class="container">
-      <form action='index' method='post'>
-        <input type='hidden' name='form-name' value='form 5' />
-        <input class="search-control" type="text" name="search" placeholder="Search">
-      </form>
-    </div>
-  </div>
-
-  <!-- End Search -->
-
-  <!-- Start Back To Top Section -->
-
-  <div class="back-to-top">
-    <a href="#">
-      <img src="{{ asset('/image/image_page/to-top.png')}}" alt="#">
-    </a>
-  </div>
-
-  <!-- End Back To Top Section -->
-
-  <!-- Start Pre Loader -->
- <!-- 
-
-  SE COMENTA POR AHORA DEBIDO A QUE ES NECESARIO PARA DESARROLLAR Y AGILIZAR EL TIEMPO DE CARGA
-
-  <div class="loading-mask">
-    <div class='pre-loader'>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-
- -->
-  <!-- End Pre Loader -->

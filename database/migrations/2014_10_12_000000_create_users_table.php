@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->integer("status")->default(1);
             $table->string('confirmation_code')->nullable();
-            $table->integer('confirmed')->default(0);
+            $table->integer('confirmed')->default(1);
             $table->integer('admin_app')->default(0);
             $table->rememberToken();
             $table->timestamps();

@@ -23,7 +23,7 @@ class ConfirmedMiddleware
                 return $next($request);
         }    
 
-         swal()->info('Usuario Registrado ','debe confirmar su correo electronico !',['timer'=>15000, 'width'=> 800 ]);
+      //   swal()->info('Usuario Registrado ','debe confirmar su correo electronico !',['timer'=>15000, 'width'=> 800 ]);
 
 
             return redirect('/');

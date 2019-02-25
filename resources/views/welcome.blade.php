@@ -20,61 +20,31 @@
           </div>
         </div>
       </div>
-
       <div class="row">
+     @foreach($publications as $publication)
         <div class="col-sm-3 col-xs-6">
           <div class="portfolio-box">
             <div class="portfolio-img">
-              <img src="{{ asset("image/publications/2.jpg") }}" alt="#">
+              <img src="{{ asset($publication->images->first()->route) }}" alt="#">
               <div class="overlay">
                 <a href="#">
                   <i class="fa fa-eye"></i>
                 </a>
               </div>
             </div>
-
           </div>
+          <span><center><h3>{{ $publication->name }}</h3></center></span>
+          <span><center><h4> {{ number_format($publication->price, 2, ',', '.') }} $
+           @if (!Auth::guest())
+              @if($publication->user_id != Auth::user()->id )  
+                  <a data-toggle="tooltip" data-placement="top" title="add shopin car" class="btn btn-xs btn-primary"  href="{{route('ShoppingCartAdd',$publication->id)}}"><i class="fa fa-cart-plus"></i></a> @endif 
+           @endif
+        <h4> </center></span>
         </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/3.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
 
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/4.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
+   @endforeach
 
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/5.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
 
-          </div>
-        </div>
-      </div>
 
 
 
@@ -83,201 +53,5 @@
   <!-- End Girls -->
 
   <!-- Start Girls -->
-  <section class="portfolio">
-    <div class="container">
-
-
-      <div class="row">
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/2.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/3.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/4.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/5.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-  <!-- End Girls -->
-
-  <!-- Start Girls -->
-  <section class="portfolio">
-    <div class="container">
-
-
-      <div class="row">
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/2.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/3.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/4.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/5.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-  <!-- End Girls -->
-
-  <!-- Start Girls -->
-  <section class="portfolio">
-    <div class="container">
-
-
-      <div class="row">
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/2.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/3.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/4.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <div class="portfolio-box">
-            <div class="portfolio-img">
-              <img src="{{ asset("image/publications/5.jpg") }}" alt="#">
-              <div class="overlay">
-                <a href="#">
-                  <i class="fa fa-eye"></i>
-                </a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-
-
-    </div>
-  </section>
-  <!-- End Girls -->
-
+ 
   @endsection

@@ -52,24 +52,29 @@
   <section class="portfolio">
     <div class="container">
       <div class="row visible-xs visible-sm">
-        <img src="{{ asset('/image/image_page/white.png')}}" class="img-responsive">
+        <img src="{{ asset('/image/publications/white.png')}}" class="img-responsive">
         <div classs="clearfix"></div>
         <div class="menumobile">
           <ul class="site-infos text-center">
             <li>
-              <a href="#">
-                <i class="fa fa-search"></i> Cerca</a></li><a href="#">
-            </a>
-            <li>
-              <a href="#">
-                <i class="fa fa-bullhorn"></i> Pubblica</a></li><a href="#">
+              <a href="{{ url('/ToPost') }}">
+                <i class="fa fa-bullhorn"></i> To Post</a></li>
             </a>
              @if (Auth::guest())
               <li> <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
              </ul>
               @else
 
-              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li></ul>
+              
+              <li>
+              <a href="{{ route('PublicationsShoppingCart') }}">
+                <i class="fa fa-cart-plus"></i> Shopping Cart</a></li>
+
+              <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+
+            
+
+            </ul>
                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}
                </form>

@@ -12,11 +12,13 @@
       <div class="col-sm-4"></div>
           <div class="col-sm-6">
             <ul class="site-infos text-right">
-              <li><a href="{{ url('/ToPost') }}"><i class="fa fa-bullhorn"></i> Pubblica</li></a>
+              <li><a href="{{ url('/ToPost') }}"><i class="fa fa-bullhorn"></i> To post</li></a>
                @if (Auth::guest())
               <li> <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> Login</li>
               <li><a href="{{ url('/register') }}"><i class="fa fa-sign-in"></i> Register</li> 
               @else
+              <li><a href="{{ route('PublicationsShoppingCart') }}"><i class="fa fa-cart-plus"></i> Shopping Cart</a></li>
+
               <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         {{ csrf_field() }}

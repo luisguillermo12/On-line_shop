@@ -9,16 +9,22 @@ use Auth;
 use Massaggi\User;
 use Massaggi\Publications;
 use Massaggi\UserPublications;
-use Massaggi\images;
 use Massaggi\ParametersSystem;
+use Massaggi\images;
 use Illuminate\Support\Facades\Storage;
-
 class ToPostController extends Controller
 {
 
     public function index(){
-    	$publications = Publications::get();
-    	return view('publications.publications');
+        if (!Auth::guest()){
+            	$parameter = ParametersSystem::where('code', 2)->first(); 
+                $publications = Publications::where('user_id',Auth::user()->id)->get();
+                    return view('publications.publications')
+                    ->with('parameter', $parameter)
+                    ->with('publications', $publications);
+        }else{
+            return redirect()->route('login');
+        }
     }
     public function create(){
         return view('publications.publications_create');
@@ -26,18 +32,14 @@ class ToPostController extends Controller
     public function store(Request $request){
         
 
-        $parameter = ParametersSystem::where('code', 2)->where('name', 'profile_paths')->first(); 
+        $parameter = ParametersSystem::where('code', 2)->first(); 
 
     	$publication = new Publications ();
         $publication->name = $request->name;
         $publication->description = $request->description;
         $publication->price = $request->price;
+        $publication->user_id = Auth::user()->id;
         $publication->save();
-
-        $user_publication = new UserPublications;
-        $user_publication->user_id = Auth::user()->id;
-        $user_publication->publication_id = $publication->id;
-        $user_publication->save();
 
         $images = $request->file('images');
         $disco = Storage::disk('public');
@@ -50,9 +52,10 @@ class ToPostController extends Controller
                 $data[] = $name;
           	       
 		           $image = New images ();
-		           $image->route = '/images_publications/'.$name;
+		           $image->route = $parameter->value.$name;
 		           $image->name = $name;
-		           $image ->save(); 
+		           $image->publication_id =$publication->id; 
+		           $image ->save();
 
 		       }
 

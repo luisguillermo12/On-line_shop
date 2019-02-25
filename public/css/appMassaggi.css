@@ -13025,7 +13025,7 @@ footer .copyright ul.navigation-links li:last-child {
   overflow: hidden;
 }
 .portfolio-img img{
-  height: 350px;
+  height: 250px;
 }
 /* line 11, ../sass/components/_portfolio.scss */
 .portfolio .portfolio-box .portfolio-img .overlay {
