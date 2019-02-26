@@ -1,5 +1,7 @@
 <?php
 
+Route::get('/{id}', 'HomeController@show')->name('postdetails');
+
 Route::get('/register/verify/{code}', 'Auth\RegisterController@verify');
 Route::get('/User/Profile/{id}', 'Auth\UserController@profile')->name('UserProfile');
 Route::get('/User/RecodeVerify/{id}','Auth\UserController@re_code_verify' )->name('ReCodeVeryUser');

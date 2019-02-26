@@ -1,5 +1,5 @@
 
-  <footer class="navbar navbar-fixed-bottom" >
+  <footer lass="page-footer" >
     
     <div class="overlay">
       <div class="footer-content">
@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <div class="copyright  navbar-fixed-bottom">
+    <div class="copyright">
       <div class="container ">
         <div class="row">
           <div class="col-sm-6">

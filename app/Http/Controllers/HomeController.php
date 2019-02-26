@@ -24,25 +24,28 @@ class HomeController extends Controller
     
     public function welcome (){
         $publications = Publications::get();
-
-    if (!Auth::guest()){
-        $cart = User::where('id', Auth::user()->id)->first()->cart;
-        $in_the_cart = $publications->intersect($cart);
-    } 
-        $parameter = ParametersSystem::where('code', 2)->first(); 
-     
-
-             if (!Auth::guest()){
+        $parameter = ParametersSystem::where('code', 2)->first();
+            if (!Auth::guest()){
+                $cart = User::where('id', Auth::user()->id)->first()->cart;
+                $in_the_cart = $publications->intersect($cart);
+            } 
+         
+            if (!Auth::guest()){
                     return view('welcome')   
                       ->with('in_the_cart', $in_the_cart)
                     ->with('parameter', $parameter)
                     ->with('publications', $publications);
-              
-            }else {
+                }else {
                      return view('welcome')   
                     ->with('parameter', $parameter)
                     ->with('publications', $publications);
             }
+    }
+    public function show($id){
+        
+         $post = Publications::FindOrFail($id);
+         return view('showpost')
+         ->with('post', $post);
     }
 
 

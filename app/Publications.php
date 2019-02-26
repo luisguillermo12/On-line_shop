@@ -3,9 +3,10 @@
 namespace Massaggi;
 
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Foundation\Auth\User;
+//use Illuminate\Foundation\Auth\User;
 use Illuminate\Database\Eloquent\Model;
 use Massaggi\images;
+use Massaggi\User;
 
 
 class Publications extends Model 
@@ -17,6 +18,9 @@ class Publications extends Model
  
      public function images(){
    		 return $this->hasMany(images::class, 'publication_id');
+	}
+	public function user(){
+  		return $this->belongsTo(User::class);
 	}
  
 }

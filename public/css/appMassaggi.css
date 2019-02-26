@@ -28,7 +28,7 @@ img.selectimg{
   margin: 0 auto;
 }
 .heigth{
-  min-height: 500px;
+  min-height: 200px;
 }
 
 .check, img.selectimg:hover {
@@ -9867,8 +9867,9 @@ a, a:hover, a:focus,
 /* Footer */
 /* line 2, ../sass/layouts/_footer.scss */
 footer {
-  background-color: #08088A !important;
+  background-color: #08088A !important; 
   width: 100%;
+  height: 100px;
 }
 /* line 4, ../sass/layouts/_footer.scss */
 footer .overlay {

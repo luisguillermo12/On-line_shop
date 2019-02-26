@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
    @if (Auth::guest()) 
     @else   
@@ -7,7 +6,6 @@
         <span>  Debe confirmar su correo electronico </span> 
       @endif
    @endif
-  <!-- Start Girls -->
   <section class="portfolio">
     <div class="container">
       <div class="row">
@@ -27,7 +25,7 @@
             <div class="portfolio-img">
               <img src="{{ asset($publication->images->first()->route) }}" alt="#">
               <div class="overlay">
-                <a href="#">
+                <a href="{{route('postdetails',$publication->id)}}">
                   <i class="fa fa-eye"></i>
                 </a>
               </div>
@@ -47,17 +45,7 @@
            @endif
         <h4> </center></span>
         </div>
-
    @endforeach
-
-
-
-
-
-    </div>
-  </section>
-  <!-- End Girls -->
-
-  <!-- Start Girls -->
- 
-  @endsection
+  </div>
+</section>
+@endsection
