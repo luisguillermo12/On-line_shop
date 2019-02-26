@@ -59,6 +59,7 @@
     
                     @if (Auth::guest())
                               <li> <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> Login</a></li>
+                              <li><a href="{{ url('/register') }}"><i class="fa fa-sign-in"></i> Register</li> 
              </ul>
                      @else   
                              <li> <a href="{{ route('PublicationsShoppingCart') }}"> <i class="fa fa-cart-plus"></i> Shopping Cart </a> </li>
