@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/{id}', 'HomeController@show')->name('postdetails');
+Route::get('detailpost/{id}', 'HomeController@show')->name('postdetails');
 
 Route::get('/register/verify/{code}', 'Auth\RegisterController@verify');
 Route::get('/User/Profile/{id}', 'Auth\UserController@profile')->name('UserProfile');

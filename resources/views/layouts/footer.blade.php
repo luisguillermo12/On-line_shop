@@ -1,5 +1,5 @@
 
-  <footer lass="page-footer" >
+  <footer class="page-footer navbar navbar-fixed-bottom" >
     
     <div class="overlay">
       <div class="footer-content">
