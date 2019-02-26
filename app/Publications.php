@@ -11,7 +11,7 @@ use Massaggi\User;
 
 class Publications extends Model 
 {
-    protected $table = 'Publications';
+    protected $table = 'Publicationss';
     protected $primarykey = 'id';
     protected $fillable = ['name', 'description', 'price', 'user_id'];
 
